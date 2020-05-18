@@ -2,11 +2,11 @@
 <!DOCTYPE project [
 ]>
 
-<project name="Specialist Portal" default="usage" basedir=".">
+<project name="SpecialistPorta" default="usage" basedir=".">
    
 	<property environment="env"/>
     <property name="ws.home" value="${basedir}"/>
-    <property name="ws.jars" value="C:\Users\Arbina\Documents\Jar"/>
+    <property name="ws.jars" value="C:\Users\Arbina\git\SpecialistPorta\Driver"/>
     <property name="test.dest" value="${ws.home}/build"/>
     <property name="test.src" value="${ws.home}/src"/>
     <property name="ng.result" value="${ws.home}/test-output"/>
@@ -77,7 +77,7 @@
 	<!--run-->
 	   <target name="run" depends="compile">
 	     <testng classpath="${test.classpath}:${test.dest}" suitename="suite1">
-	       <xmlfileset dir="${ws.home}" includes="testng-customsuite.xml"/>
+	       <xmlfileset dir="${ws.home}" includes="testng.xml"/>
 	      </testng>
 	      	
 	<!--
